@@ -1,0 +1,13 @@
+AJK LIPPO LIFE
+1. CONTTROLLERS/DOCUMENT/DATATABLES_PRINT.
+	- OPEN WHERE FLAG -- where('debitur.flag_upload_certificate', 1)
+2. VIEWS/DOCUMENT/LIST_PRINT.
+	- OPEN FORM ACTION -- <form action="<?= site_url('debitur/upload_doc_certificate')?>" method="post">
+3. CONTROLLERS/DEBITUR 
+	- OPEN WHERE CONDITION -- ->where('debitur.flag_upload_certificate = 0')
+
+AJK EQUITY LIFE
+2. VIEWS/DOCUMENT/LIST_PRINT.
+	- OPEN FORM ACTION -- <form action="<?= site_url('document/generate_certificate')?>" method="post">
+3. CONTROLLERS/DEBITUR 
+	- OPEN WHERE CONDITION -- ->where('debitur.rowstate != 6')->where('debitur.rowstate != 5')
